@@ -33,6 +33,7 @@ FocusTable <- function(query) {
 # A line chart of five most volatile counties
 Volatile5 <- function(query) {
   load(paste(getwd(),"/data/",query,"/CountyBubble.rda",sep=""))
+  load(paste(getwd(),"/data/",query,"/byCountyByMonth.rda",sep=""))
   top5 <- as.data.frame(cbind(County=subset(CountyBubble,RankVol<=5)$"County, State"))
   top5 <- merge(as.data.frame(top5),byCountyByMonth,by="County",all.x=T)
   top5$yearMon <- as.yearmon(top5$Month)
@@ -83,29 +84,4 @@ Geo10 <- function(query) {
                             displayMode="markers", 
                             resolution="provinces",
                             width=600, height=400))
-}
-
-# Footer for each page
-navfooter <- function() {
-  tags$hr(), 
-  tags$h4("Attribution and Credit"),
-  tags$p(
-    tags$a(href="www.clinicaltrials.gov","ClinicalTrials.gov")," for all trial data; ",
-    tags$a(href="geonames.org","geonames.org"),
-    " for geocoding services; ",
-    tags$a(href="census.gov","census.gov"), 
-    " for U.S. county population data; Charting services: ",
-    tags$a(href="https://github.com/mages/googleVis","googleVis-0.5.5")," | ",
-    tags$a(href="https://developers.google.com/terms/","Google Terms of Use")," | ",
-    tags$a(href="https://google-developers.appspot.com/chart/interactive/docs/gallery","Documentation and Data Policy"),"; ",
-    tags$a(href="https://www.shinyapps.io","ShinyApps")," and R for providing the tools."
-  ),
-  tags$h4("Authorship"),
-  tags$p(
-    tags$a(href="http://gary-chung.com","Gary Chung")," | ",
-    tags$a(href="https://github.com/gunkadoodah/CTgov","Git")
-  ),
-  tags$p("Let me know if you'd like another health condition plotted.")                            
-  
-  
 }
