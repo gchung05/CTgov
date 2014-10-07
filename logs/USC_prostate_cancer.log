@@ -1,0 +1,23 @@
+
+Run on 2014-10-05
+1760 trials for prostate_cancer found.
+19990 cities for prostate_cancer trials.
+Reduced to 1496 unique cities.
+Geocoding using world.cities got 39.3% match, or 588 out of 1496.
+Geocoding using geonames.org got 88.4% match, or 803 out of 908.
+105 cities, or 7% could not be geocoded and will be dropped.
+First pass Lat/Lon->County matched 96%, or 1335 out of 1391 counties.
+Second pass Lat/Lon->County matched 99.1%, or 1378 out of 1391 counties.
+222 counties remain population unmatched.
+19429 cities successfully coded and ready for analysis.
+Cities belong to 739 total counties.
+Top county: Erie County, New York with 120 trials all-time.
+18849 cities remain after dropping trials with (no start date) AND no (end date OR ongoing status).
+Cities belong to 738 total counties.
+Top county: Nassau County, New York with 119 trials all-time.
+18849 cities remain after dropping trials with (no start date) AND no (end date OR ongoing status).
+Cities belong to 738 total counties.
+Top county: Nassau County, New York with 119 trials all-time.
+18849 cities remain after dropping trials with (no start date) AND no (end date OR ongoing status).
+Most volatile: Los Angeles County, California with a volatility of 16.99 trials.
+16 bubbles kept based on current filters.

@@ -1,0 +1,64 @@
+Gary1
+16348163482014-10-05Run on 2014-10-05/nRun on 2014-10-05
+Run on 2014-10-05
+1782 trials for hypertension found.
+More than 500 trials. A random sample of 500 will be taken.
+11 locations for hypertension trials.
+3244 locations for hypertension trials.
+Reduced to 794 unique locations.
+Geocoding using world.cities got 47.2% match, or 375 out of 794.
+Geocoding using geonames.org got 89.5% match, or 375 out of 419.
+44  observations, or 5.5 % could not be geocoded and will be dropped.
+First pass Lat/Lon->County matched 96.1%, or 721 out of 750 counties.
+Second pass Lat/Lon->County matched 100%, or 750 out of 750 counties.
+3195 cities successfully coded and ready for analysis.
+3195 cities successfully coded and ready for analysis.
+Reduced to 794 unique cities.
+Geocoding using world.cities got 47.2% match, or 375 out of 794.
+First pass Lat/Lon->County matched 96.1%, or 721 out of 750 counties.
+Second pass Lat/Lon->County matched 100%, or 750 out of 750 counties.
+3181 cities successfully coded and ready for analysis.
+
+Run on 2014-10-05
+
+Run on 2014-10-05
+1782 trials for hypertension found.
+More than 500 trials. A random sample of 500 will be taken.
+3244 cities for hypertension trials.
+Reduced to 794 unique cities.
+Geocoding using world.cities got 47.2% match, or 375 out of 794.
+Geocoding using geonames.org got 89.5% match, or 375 out of 419.
+44  observations, or 5.5 % could not be geocoded and will be dropped.
+First pass Lat/Lon->County matched 96.1%, or 721 out of 750 counties.
+Second pass Lat/Lon->County matched 100%, or 750 out of 750 counties.
+3181 cities successfully coded and ready for analysis.
+Cities belong to  407 total counties.
+Largest county: De Kalb County, Georgia with 49 trials.
+3142 cities remain after dropping trials with no start date AND (end date OR ongoing status).
+Most volatile: Miami-dade County, Florida with a volatility of 9.44 trials.
+Top county: De Kalb County, Georgia with 49 trials all-time.
+3142 cities remain after dropping trials with (no start date) AND no (end date OR ongoing status).
+Most volatile: Miami-dade County, Florida with a volatility of 9.44 trials.
+
+Run on 2014-10-05
+1782 trials for hypertension found.
+12681 cities for hypertension trials.
+Reduced to 1379 unique cities.
+Geocoding using world.cities got 39.1% match, or 539 out of 1379.
+Reduced to 1379 unique cities.
+Geocoding using world.cities got 39.1% match, or 539 out of 1379.
+Geocoding using geonames.org got 85% match, or 714 out of 840.
+126 cities, or 9.1% could not be geocoded and will be dropped.
+First pass Lat/Lon->County matched 96.2%, or 1205 out of 1253 counties.
+Second pass Lat/Lon->County matched 99.4%, or 1246 out of 1253 counties.
+12 counties remain population unmatched.
+12435 cities successfully coded and ready for analysis.
+Cities belong to 590 total counties.
+Top county: Davidson County, Tennessee with 94 trials all-time.
+12171 cities remain after dropping trials with (no start date) AND no (end date OR ongoing status).
+Most volatile: Los Angeles County, California with a volatility of 21.35 trials.
+Cities belong to  587 total counties.
+Top county: Davidson County, Tennessee with 94 trials all-time.
+12159 cities remain after dropping trials with (no start date) AND no (end date OR ongoing status).
+Most volatile: Los Angeles County, California with a volatility of 21.35 trials.
+17 bubbles kept based on current filters.

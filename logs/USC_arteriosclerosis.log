@@ -1,0 +1,17 @@
+
+Run on 2014-10-05
+1290 trials for arteriosclerosis found.
+12140 cities for arteriosclerosis trials.
+Reduced to 1419 unique cities.
+Geocoding using world.cities got 39.9% match, or 566 out of 1419.
+Geocoding using geonames.org got 87.1% match, or 743 out of 853.
+110 cities, or7.8% could not be geocoded and will be dropped.
+First pass Lat/Lon->County matched 96.6%, or 1264 out of 1309 counties.
+Second pass Lat/Lon->County matched 99.5%, or 1302 out of 1309 counties.
+19 counties remain population unmatched.
+11871 cities successfully coded and ready for analysis.
+Cities belong to  643 total counties.
+Top county: Oakland County, Michigan with 94 trials all-time.
+11671 cities remain after dropping trials with (no start date) AND no (end date OR ongoing status).
+Most volatile: Los Angeles County, California with a volatility of 14.1 trials.
+15 bubbles kept based on current filters.

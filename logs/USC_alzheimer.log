@@ -1,0 +1,20 @@
+
+Run on 2014-10-05
+668 trials for alzheimer found.
+
+Run on 2014-10-06
+668 trials for alzheimer found.
+7659 cities for alzheimer trials.
+Reduced to 707 unique cities.
+Geocoding using world.cities got 47.7% match, or 337 out of 707.
+Geocoding using geonames.org got 82.7% match, or 306 out of 370.
+64 cities, or 9.1% could not be geocoded and will be dropped.
+First pass Lat/Lon->County matched 95%, or 611 out of 643 counties.
+Second pass Lat/Lon->County matched 99.4%, or 639 out of 643 counties.
+7 counties remain population unmatched.
+7475 cities successfully coded and ready for analysis.
+Cities belong to 331 total counties.
+Top county: San Francisco County, California with 77 trials all-time.
+7084 cities remain after dropping trials with (no start date) AND no (end date OR ongoing status).
+Most volatile: Orange County, California with a volatility of 17.79 trials.
+13 bubbles kept based on current filters.

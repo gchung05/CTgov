@@ -1,0 +1,17 @@
+
+Run on 2014-10-05
+977 trials for asthma found.
+10598 cities for asthma trials.
+Reduced to 1212 unique cities.
+Geocoding using world.cities got 39.9% match, or 484 out of 1212.
+Geocoding using geonames.org got 78.7% match, or 573 out of 728.
+155 cities, or 12.8% could not be geocoded and will be dropped.
+First pass Lat/Lon->County matched 96.1%, or 1016 out of 1057 counties.
+Second pass Lat/Lon->County matched 99.4%, or 1051 out of 1057 counties.
+22 counties remain population unmatched.
+10323 cities successfully coded and ready for analysis.
+Cities belong to 511 total counties.
+Top county: Suffolk County, Massachusetts with 90 trials all-time.
+9900 cities remain after dropping trials with (no start date) AND no (end date OR ongoing status).
+Most volatile: Los Angeles County, California with a volatility of 37.35 trials.
+14 bubbles kept based on current filters.
