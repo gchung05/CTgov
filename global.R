@@ -7,12 +7,7 @@ if (!require(zoo)) install.packages("zoo"); library(zoo)
 
 # A bubble chart
 FocusBubbles <- function(query) {
-  wdHold <- getwd()
-  theQuery <- query
-  dataRoot <- paste(getwd(),"/Data",sep="")
-  setwd(file.path(dataRoot, theQuery))
-  load("Bubbles.rda")
-  setwd(wdHold)
+  load(paste(getwd(),"/data/",query,"/Bubbles.rda",sep=""))
   gvisBubbleChart(Bubbles, idvar="CountyState", 
                   xvar="Population", yvar="Trials",
                   sizevar="Volatility", colorvar="PPT",
@@ -27,12 +22,7 @@ FocusBubbles <- function(query) {
 
 # Table of the Focus Counties
 FocusTable <- function(query) {
-  wdHold <- getwd()
-  theQuery <- query
-  dataRoot <- paste(getwd(),"/Data",sep="")
-  setwd(file.path(dataRoot, theQuery))
-  load("Bubbles.rda")
-  setwd(wdHold)
+  load(paste(getwd(),"/data/",query,"/Bubbles.rda",sep=""))
   theTable <- rename(Bubbles[,c('County, State','Population','Trials','perTrial','Volatility','Largest City')],
                      c("Trials"="2013 Average Trials/Month","Largest City"="Largest City in County",
                        "Population"="2013 Population","perTrial"="People Per Trial"))
@@ -42,12 +32,7 @@ FocusTable <- function(query) {
 
 # A line chart of five most volatile counties
 Volatile5 <- function(query) {
-  wdHold <- getwd()
-  theQuery <- query
-  dataRoot <- paste(getwd(),"/Data",sep="")
-  setwd(file.path(dataRoot, theQuery))
-  load("CountyBubble.rda")
-  setwd(wdHold)
+  load(paste(getwd(),"/data/",query,"/CountyBubble.rda",sep=""))
   top5 <- as.data.frame(cbind(County=subset(CountyBubble,RankVol<=5)$"County, State"))
   top5 <- merge(as.data.frame(top5),byCountyByMonth,by="County",all.x=T)
   top5$yearMon <- as.yearmon(top5$Month)
@@ -67,13 +52,8 @@ Volatile5 <- function(query) {
 
 # Tables Listing Counties Atypically High or Low # of Trials, Adjusted by County Population
 AtypHigh <- function(query) {
-  wdHold <- getwd()
-  theQuery <- query
-  dataRoot <- paste(getwd(),"/Data",sep="")
-  setwd(file.path(dataRoot, theQuery))
-  load("CountyBubble.rda")
-  setwd(wdHold)
-  
+  load(paste(getwd(),"/data/",query,"/CountyBubble.rda",sep=""))
+    
   top5 <- subset(CountyBubble,rank(-CountyBubble$Resids)<=5)
   theTable <- rename(top5[,c('County, State','Population','Trials','perTrial','Volatility','Largest City')],
                      c("Trials"="2013 Average Trials/Month","Largest City"="Largest City in County",
@@ -82,13 +62,8 @@ AtypHigh <- function(query) {
             formats=list("2013 Population"="#,###","People Per Trial"="#,###"))
 }
 AtypLow <- function(query) {
-  wdHold <- getwd()
-  theQuery <- query
-  dataRoot <- paste(getwd(),"/Data",sep="")
-  setwd(file.path(dataRoot, theQuery))
-  load("CountyBubble.rda")
-  setwd(wdHold)
-  
+  load(paste(getwd(),"/data/",query,"/CountyBubble.rda",sep=""))
+    
   bot5 <- subset(CountyBubble,rank(CountyBubble$Resids)<=5)
   theTable <- rename(bot5[,c('County, State','Population','Trials','perTrial','Volatility','Largest City')],
                      c("Trials"="2013 Average Trials/Month","Largest City"="Largest City in County",
@@ -99,12 +74,7 @@ AtypLow <- function(query) {
 
 # A Geo Chart of the Top 10 Most Trialed Counties
 Geo10 <- function(query) {
-  wdHold <- getwd()
-  theQuery <- query
-  dataRoot <- paste(getwd(),"/Data",sep="")
-  setwd(file.path(dataRoot, theQuery))
-  load("CountyBubble.rda")
-  setwd(wdHold)
+  load(paste(getwd(),"/data/",query,"/CountyBubble.rda",sep=""))
   
   top10 <- subset(CountyBubble,RankTrials<=10)
   top10$hover <- paste(top10$County," County Pop: ",top10$Population,", Largest City: ",top10$"Largest City",sep="")
@@ -115,3 +85,27 @@ Geo10 <- function(query) {
                             width=600, height=400))
 }
 
+# Footer for each page
+navfooter <- function() {
+  tags$hr(), 
+  tags$h4("Attribution and Credit"),
+  tags$p(
+    tags$a(href="www.clinicaltrials.gov","ClinicalTrials.gov")," for all trial data; ",
+    tags$a(href="geonames.org","geonames.org"),
+    " for geocoding services; ",
+    tags$a(href="census.gov","census.gov"), 
+    " for U.S. county population data; Charting services: ",
+    tags$a(href="https://github.com/mages/googleVis","googleVis-0.5.5")," | ",
+    tags$a(href="https://developers.google.com/terms/","Google Terms of Use")," | ",
+    tags$a(href="https://google-developers.appspot.com/chart/interactive/docs/gallery","Documentation and Data Policy"),"; ",
+    tags$a(href="https://www.shinyapps.io","ShinyApps")," and R for providing the tools."
+  ),
+  tags$h4("Authorship"),
+  tags$p(
+    tags$a(href="http://gary-chung.com","Gary Chung")," | ",
+    tags$a(href="https://github.com/gunkadoodah/CTgov","Git")
+  ),
+  tags$p("Let me know if you'd like another health condition plotted.")                            
+  
+  
+}
